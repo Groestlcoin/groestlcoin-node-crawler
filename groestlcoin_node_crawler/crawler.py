@@ -12,7 +12,7 @@ class Crawler:
 
     async def get_dns_hosts(self, dns_seeds):
         """
-        Fetches Bitcoin DNS seeds and adds them to the host set
+        Fetches Groestlcoin DNS seeds and adds them to the host set
         """
         logger.info("Populating hosts from DNS seeds")
         loop = asyncio.get_event_loop()

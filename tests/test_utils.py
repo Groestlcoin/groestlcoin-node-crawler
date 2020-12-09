@@ -1,4 +1,4 @@
-from bitcoin_node_crawler.utils import serialize_var_int, deserialize_var_int
+from groestlcoin_node_crawler.utils import serialize_var_int, deserialize_var_int
 
 
 def test_de_serialize_var_int():

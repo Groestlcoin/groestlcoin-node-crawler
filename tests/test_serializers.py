@@ -4,7 +4,7 @@ from random import randint, getrandbits
 import pytest
 from faker import Faker
 
-from bitcoin_node_crawler.messages import Address, Version
+from groestlcoin_node_crawler.messages import Address, Version
 
 f = Faker()
 

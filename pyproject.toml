@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "bitcoin-node-crawler"
+name = "groestlcoin-node-crawler"
 version = "0.1.0"
 description = ""
-authors = ["Daniel van Flymen <vanflymen@gmail.com>"]
+authors = ["Groestlcoin Developers <groestlcoin@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

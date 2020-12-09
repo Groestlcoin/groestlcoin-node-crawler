@@ -3,15 +3,13 @@ import asyncio
 from loguru import logger
 from synapse_p2p import Server
 
-from bitcoin_node_crawler.crawler import Crawler
+from groestlcoin_node_crawler.crawler import Crawler
 
 DNS_SEEDS = [
-    ("seed.bitcoin.sipa.be", 53),
-    ("dnsseed.bluematt.me", 53),
-    ("dnsseed.bitcoin.dashjr.org", 53),
-    ("seed.bitcoinstats.com", 53),
-    ("seed.bitcoin.jonasschnelli.ch", 53),
-    ("seed.btc.petertodd.org", 53),
+    ("dnsseed1.groestlcoin.org", 53),
+    ("dnsseed2.groestlcoin.org", 53),
+    ("dnsseed3.groestlcoin.org", 53),
+    ("dnsseed4.groestlcoin.org", 53),
 ]
 
 server = Server()

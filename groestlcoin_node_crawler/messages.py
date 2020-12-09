@@ -1,9 +1,9 @@
 import struct as s
 import time
+import groestlcoin_hash
 from dataclasses import dataclass
-from hashlib import sha256
 
-from bitcoin_node_crawler.utils import deserialize_var_int, serialize_var_int
+from groestlcoin_node_crawler.utils import deserialize_var_int, serialize_var_int
 
 
 @dataclass
@@ -13,12 +13,12 @@ class Message:
         payload = getattr(self, "serialize")()
 
         # magic value for Main net
-        magic = bytes.fromhex("F9BEB4D9")
+        magic = bytes.fromhex("F9BEB4D4")
         command = message_name + (12 - len(message_name)) * "\00"
         length = s.pack("I", len(payload))
 
-        # Bitcoin checksums only use the first 4 bytes
-        checksum = sha256(sha256(payload).digest()).digest()[:4]
+        # Groestlcoin checksums only use the first 4 bytes
+        checksum = groestlcoin_hash.getHash(payload, len(payload))[:4]
 
         return magic + command.encode() + length + checksum + payload
 
